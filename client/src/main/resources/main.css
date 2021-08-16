@@ -228,3 +228,21 @@ Button:hover {
 .parent .text-field-invalid {
     -fx-background-color: red, -color-2;
 }
+
+/*
+
+    Updated CSS for Ghost Data Demo is below:
+
+*/
+
+.entity-menu {
+    -fx-background-color: transparent;
+    -fx-color: -color-2;
+    -fx-max-width: infinity;
+    -fx-min-width: 85px;
+    -fx-border-width: 0;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 0;
+    -fx-alignment: center-left;
+}
