@@ -1,0 +1,12 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+conclave-sdk-1.1
+.idea
+
+container-id
+/bundle/deploy/
+/bundle/package/
+/order-book-demo/conclave-image.tar

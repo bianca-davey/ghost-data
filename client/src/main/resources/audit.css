@@ -1,0 +1,24 @@
+#contentScroll {
+    -fx-background-color: transparent;
+    -mdfx-font-color: white;
+}
+
+#contentScroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+#contentScroll .markdown-heading-1 { -fx-padding: 0;}
+#contentScroll .markdown-heading-2 { -fx-padding: 0;}
+#contentScroll .markdown-heading-3 { -fx-padding: 0; }
+#contentScroll .markdown-heading-4 { -fx-padding: 0; }
+#contentScroll .markdown-heading-5 { -fx-padding: 0; }
+#contentScroll .markdown-italic { -fx-font-style: italic; }
+#contentScroll .markdown-bold { -fx-font-weight: bold; }
+
+#measurementLabel {
+    -fx-font-family: monospace;
+}
+
+#contentScroll > .scroll-bar {
+    -fx-base: -color-2;
+}

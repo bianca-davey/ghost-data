@@ -1,0 +1,230 @@
+* {
+    -color-0: #252525; /* Background color */
+    -color-1: white; /* Text color */
+    -color-2: #363636; /* Lighter background */
+    -color-3: #d4d4d4; /* Light background */
+    -color-4: #A7B3BC; /* Alt color */
+    -color-5: #008fee; /* Accent color */
+
+    -fx-text-inner-color: white;
+}
+
+.parent {
+    -fx-background-color: -color-0;
+    -fx-font-family: "Nunito", sans-serif;
+    -fx-font-size: 1.3em;
+    -fx-text-fill: white;
+
+    -fx-background: -color-0;
+}
+
+.sidebar {
+    -fx-background-color: -color-2;
+}
+
+.sidebar-menu-item {
+    -fx-background-color: transparent;
+    -fx-max-width: infinity;
+    -fx-min-width: 85px;
+    -fx-border-width: 0;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 0;
+    -fx-alignment: center-left;
+}
+
+.sidebar-menu-item .text {
+    -fx-fill: white;
+}
+
+.sidebar-menu-icon {
+}
+
+.logo {
+    -fx-background-color: -color-2;
+    -fx-background-padding: -10px;
+    -fx-text-color: -color-5;
+}
+
+.logo Text {
+    -fx-fill: -color-5;
+    -fx-font-size: xx-large;
+}
+
+.logo FontIcon {
+    -fx-fill: -color-5;
+}
+
+.user-button {
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-fill: white;
+    -fx-border-color: grey;
+    -fx-border-style: solid;
+    -fx-border-width: 0;
+    -fx-font-weight: bold;
+    -fx-border-radius: 30;
+    -fx-padding: 3;
+}
+
+.user-button .label {
+    -fx-text-fill: white;
+    -fx-font-size: 1.2em;
+}
+
+.user-button-text {
+    -fx-text-fill: white;
+}
+
+.top-menu-icon {
+}
+
+.shield {
+    -fx-fill: green;
+}
+
+Button:hover {
+    -fx-cursor: hand;
+}
+
+.title-pane FontIcon {
+    -fx-fill: white;
+    -fx-icon-size: 15;
+}
+
+.generic-button {
+    -fx-background-color: -color-2;
+    -fx-text-fill: white;
+}
+
+.generic-button:hover {
+    -fx-background-color: -color-5;
+}
+
+.toggle-button {
+    -fx-cursor: hand;
+    -fx-background-color: derive(-color-5, -40%);
+    -fx-background-radius: 0, 0, 0;
+    -fx-border-insets: 0, 0, 0;
+}
+
+.toggle-button:focused {
+    -fx-background-radius: 0, 0, 0;
+    -fx-border-insets: 0, 0, 0;
+}
+.toggle-button:selected {
+    -fx-background-color: -color-5;
+}
+
+.generic-button .label {
+    -fx-text-fill: white;
+    -fx-fill: white;
+}
+
+
+.title-pane Text {
+    -fx-fill: white;
+    -fx-font-size: 1.5em;
+    -fx-font-fill: white;
+}
+
+.contentPane {
+    -fx-background-color: -color-2;
+}
+
+.panel {
+    -fx-background-color: -color-2;
+}
+
+.panel Text {
+    -fx-fill: white;
+    -fx-font-size: 1.2em;
+    -fx-font-weight: bold;
+}
+
+
+.table-view {
+    -fx-table-cell-border-color: -color-4;
+    -fx-background-color: -color-2, -color-2;
+    -fx-body-color: -color-2;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent, transparent, derive(-color-2, 30%);
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -color-0;
+}
+
+.table-view .column-header-background .label {
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    /*-fx-background-color: transparent;*/
+}
+
+.table-view .table-cell{
+    -fx-text-fill: white;
+    -fx-border-color: transparent, transparent, transparent, transparent;
+}
+
+.table-view .filler {
+    -fx-background-color: transparent;
+}
+
+.table-row-cell {
+    -fx-background-color: -color-0, -color-2;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    -fx-alignment: center;
+}
+
+.table-row-cell:odd{
+    -fx-background-color: -color-0, -color-0;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.0em; /* 0 */
+    -fx-alignment: center;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #005797;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+    -fx-alignment: center;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+/* Spread things out with plenty of whitespace. */
+.parent .text-field, .parent .password-field {
+    -fx-margin: 10px;
+    -fx-padding: 20px;
+    -fx-font-size: 2em;
+
+    /* Red underlined edits, vaguely Material-esque */
+    -fx-background-color: -color-5, -color-2;
+    -fx-background-insets: 4 4 0 4, 3;
+    -fx-background-radius: 0;
+}
+
+.parent .text-field-invalid {
+    -fx-background-color: red, -color-2;
+}

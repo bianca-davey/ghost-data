@@ -1,0 +1,34 @@
+.parent {
+    -fx-padding: 50px;
+    -fx-spacing: 50px;
+}
+
+.parent .text-field, .parent .password-field {
+    -fx-margin: 10px;
+    -fx-padding: 30px;
+    -fx-font-size: 2em;
+}
+
+.parent .generic-button {
+    -fx-font-size: 1.8em;
+    -fx-padding: 20px;
+}
+
+/*
+ * Shrink the SVG icons and colour them properly. Paths taken from https://fontawesome.com/icons/dna?style=duotone
+ * The icons are wrapped in two groups to ensure correct scaling and layout. The inner Group scales the components,
+ * the outer group ensures layout bounds are affected by the scaling factor.
+ */
+.progress-svg-icon {
+    scalefactor: 30%;
+
+    -fx-scale-x: scalefactor;
+    -fx-scale-y: scalefactor;
+}
+
+.progress-svg-icon > .primary {
+    -fx-fill: derive(-color-5, 60%);
+}
+.progress-svg-icon > .secondary {
+    -fx-fill: -color-5;
+}

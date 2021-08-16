@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<Scene stylesheets="@main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fill="#252525">
+   <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="548.0"
+             prefWidth="760.0" styleClass="parent" vgap="50.0">
+      <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints maxHeight="180.0" minHeight="10.0" vgrow="SOMETIMES"/>
+         <RowConstraints maxHeight="153.0" minHeight="0.0" prefHeight="135.0" vgrow="SOMETIMES"/>
+         <RowConstraints maxHeight="189.0" minHeight="10.0" prefHeight="106.0" vgrow="SOMETIMES"/>
+      </rowConstraints>
+      <children>
+         <VBox prefWidth="100.0" GridPane.vgrow="NEVER">
+            <children>
+               <Label text="Instrument"/>
+               <TextField fx:id="instrumentField"/>
+            </children>
+         </VBox>
+         <VBox prefWidth="100.0" GridPane.rowIndex="1">
+            <children>
+               <Label text="Price"/>
+               <TextField fx:id="priceField"/>
+            </children>
+         </VBox>
+         <VBox layoutX="10.0" layoutY="144.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <children>
+               <Label text="Quantity"/>
+               <TextField fx:id="quantityField" text="0"/>
+            </children>
+         </VBox>
+         <VBox GridPane.columnIndex="1" GridPane.vgrow="NEVER">
+            <children>
+               <Label/>
+               <HBox alignment="TOP_RIGHT" prefWidth="200.0">
+                  <children>
+                     <ToggleButton fx:id="buyButton" mnemonicParsing="false" selected="true" styleClass="generic-button"
+                                   text="BUY">
+                        <toggleGroup>
+                           <ToggleGroup fx:id="buySell"/>
+                        </toggleGroup>
+                        <padding>
+                           <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+                        </padding>
+                     </ToggleButton>
+                     <ToggleButton fx:id="sellButton" mnemonicParsing="false" styleClass="generic-button" text="SELL"
+                                   toggleGroup="$buySell">
+                        <padding>
+                           <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+                        </padding>
+                     </ToggleButton>
+                  </children>
+               </HBox>
+            </children>
+         </VBox>
+         <ButtonBar GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+            <buttons>
+               <Button cancelButton="true" mnemonicParsing="false" onAction="#close" styleClass="generic-button"
+                       text="CANCEL">
+                  <padding>
+                     <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+                  </padding>
+               </Button>
+               <Button defaultButton="true" mnemonicParsing="false" onAction="#ok" styleClass="generic-button"
+                       text="PLACE ORDER">
+                  <padding>
+                     <Insets bottom="25.0" left="25.0" right="25.0" top="25.0"/>
+                  </padding>
+               </Button>
+            </buttons>
+         </ButtonBar>
+      </children>
+      <padding>
+         <Insets bottom="50.0" left="50.0" right="50.0" top="50.0"/>
+      </padding>
+   </GridPane>
+</Scene>

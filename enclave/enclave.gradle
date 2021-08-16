@@ -1,0 +1,31 @@
+plugins {
+    id 'com.r3.conclave.enclave'
+}
+
+dependencies {
+    implementation project(":common")
+    implementation "com.r3.conclave:conclave-enclave:$conclaveVersion"
+
+    testImplementation "com.r3.conclave:conclave-host:$conclaveVersion"
+}
+
+conclave {
+    runtime = graalvm_native_image
+    productID = 1
+    revocationLevel = 0
+
+    simulation {
+        signingType = privateKey
+        signingKey = file("../sample_private_key.pem")
+    }
+
+    debug {
+        signingType = privateKey
+        signingKey = file("../sample_private_key.pem")
+    }
+
+    release {
+        signingType = privateKey
+        signingKey = file("../sample_private_key.pem")
+    }
+}
