@@ -26,6 +26,7 @@
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.ButtonBar?>
 <Scene stylesheets="@main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <StackPane fx:id="topStack" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="924.0" prefWidth="1383.0">
         <BorderPane styleClass="parent">
@@ -42,6 +43,7 @@
                     </HBox>
                     <!-- Entity selection menu. -->
                     <AnchorPane>
+                        <!-- TODO: entity-menu styling. -->
                         <Accordion layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="200.0" styleClass="entity-menu">
                             <panes>
                                 <TitledPane animated="false" prefHeight="200.0" prefWidth="200.0" text="ENTITIES">
@@ -70,6 +72,19 @@
                             </panes>
                         </Accordion>
                     </AnchorPane>
+                    <!-- TODO: add audit button, here or top menu bar. -->
+                    <!-- Settings button.-->
+                    <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                    <ButtonBar prefWidth="190.0">
+                        <buttons>
+                            <!-- TODO: position settings button -x. -->
+                            <Button defaultButton="true" graphicTextGap="15.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="190.0" styleClass="sidebar-menu-item">
+                                <graphic>
+                                <FontIcon iconColor="WHITE" iconLiteral="fa-cogs" iconSize="25" styleClass="sidebar-menu-icon" />
+                                </graphic>
+                            </Button>
+                        </buttons>
+                    </ButtonBar>
                 </VBox>
             </left>
             <!-- End of left section. -->
